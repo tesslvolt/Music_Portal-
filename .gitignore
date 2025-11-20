@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.env
+.venv/
+.idea/
+
+media/
+staticfiles/
+
+
+python3 -m venv venv
+source venv/bin/activate
+.\venv\Scripts\activate # for wind
+pip install django
+
+django-admin startproject musicPortal .

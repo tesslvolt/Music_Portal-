@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}MusicPortal{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-emerald-50 py-10 px-4">
+  <div class="container mx-auto max-w-6xl">
+
+    <!-- Верхняя панель -->
+    <div class="flex justify-between items-center mb-10">
+      <div></div>
+
+      {% if user.is_authenticated %}
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit"
+                  class="px-4 py-2 bg-red-500 text-white rounded-full shadow hover:bg-red-600 transition">
+            Выйти
+          </button>
+        </form>
+      {% else %}
+        <div class="flex gap-4">
+          <a href="{% url 'register' %}"
+             class="px-4 py-2 bg-emerald-500 text-white rounded-full shadow hover:bg-emerald-600 transition">
+            Регистрация
+          </a>
+          <a href="{% url 'login' %}"
+             class="px-4 py-2 bg-blue-500 text-white rounded-full shadow hover:bg-blue-600 transition">
+            Вход
+          </a>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Надпись Добро пожаловать -->
+    {% if user.is_authenticated %}
+      <h1 class="text-3xl md:text-4xl font-extrabold text-center text-gray-800 mb-10">
+        Добро пожаловать, {{ user.username }}! 👋
+      </h1>
+    {% endif %}
+
+    <!-- Поиск -->
+    <form method="get" class="text-center mb-10">
+      <div class="flex justify-center">
+        <div class="relative w-full max-w-md">
+          <input type="text" name="q" value="{{ request.GET.q }}"
+                 placeholder="Поиск по песне или артисту..."
+                 class="w-full rounded-full border border-gray-300 focus:ring-2 focus:ring-emerald-400 focus:outline-none px-5 py-3 shadow-sm">
+          <button type="submit"
+                  class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full shadow-md transition">
+            🔍
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Фильтр по жанрам -->
+    <div class="text-center mb-10">
+      <strong class="text-gray-700">Жанры:</strong>
+      <div class="mt-3 flex flex-wrap justify-center gap-2">
+        <a href="{% url 'main' %}"
+           class="px-4 py-2 rounded-full text-sm font-medium transition
+           {% if not selected_genre %}
+             bg-emerald-500 text-white shadow-md
+           {% else %}
+             bg-gray-100 text-gray-700 hover:bg-emerald-100
+           {% endif %}">
+          Все
+        </a>
+
+        {% for genre in genres %}
+          <a href="?genre={{ genre.id }}"
+             class="px-4 py-2 rounded-full text-sm font-medium transition
+             {% if genre.id|stringformat:"s" == selected_genre %}
+               bg-emerald-500 text-white shadow-md
+             {% else %}
+               bg-gray-100 text-gray-700 hover:bg-emerald-100
+             {% endif %}">
+            {{ genre.name }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Все песни -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🎶 Все песни</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {% for song in songs %}
+        <div class="group bg-white/70 backdrop-blur-md rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+
+          {% if song.album.cover %}
+            <div class="relative">
+              <img src="{{ song.album.cover.url }}" alt="{{ song.title }}"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/80 via-white/40 to-transparent"></div>
+            </div>
+          {% else %}
+            <div class="w-full h-64 bg-gradient-to-r from-pink-200 to-orange-200"></div>
+          {% endif %}
+
+          <div class="p-6 pt-8 text-center bg-white/60 backdrop-blur-xl rounded-t-3xl -mt-4">
+            <h3 class="text-xl font-semibold text-gray-800 mb-1">{{ song.title }}</h3>
+
+            <p class="text-gray-500 mb-3">
+              <a href="{% url 'artist_detail' song.artist.id %}"
+                 class="text-emerald-600 font-medium hover:underline hover:text-emerald-800 transition">
+                {{ song.artist.name }}
+              </a>
+            </p>
+
+            {% if user.is_authenticated and song.audio_file %}
+              <div class="bg-white/70 border border-gray-200 rounded-xl p-3 shadow-inner">
+                <audio controls preload="none" class="w-full rounded-lg">
+                  <source src="{% url 'audio_play' song.id %}" type="audio/mpeg">
+                </audio>
+              </div>
+            {% elif not user.is_authenticated %}
+              <a href="{% url 'login' %}?next={% url 'audio_play' song.id %}"
+                 class="inline-block text-emerald-600 font-medium hover:text-emerald-800 transition">
+                Войдите, чтобы прослушать
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center text-gray-500">Нет доступных песен.</p>
+      {% endfor %}
+    </div>
+
+    <!-- Топ песни -->
+    {% if top_songs %}
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🔥 Топ песни</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {% for song in top_songs %}
+          <div class="group bg-white/70 backdrop-blur-md rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+            {% if song.album.cover %}
+              <div class="relative">
+                <img src="{{ song.album.cover.url }}" alt="{{ song.title }}"
+                     class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+              </div>
+            {% endif %}
+            <div class="p-6 text-center bg-white/60 backdrop-blur-xl rounded-t-3xl -mt-4">
+              <h3 class="text-xl font-semibold text-gray-800 mb-1">{{ song.title }}</h3>
+              <p class="text-gray-500 mb-3">
+                <a href="{% url 'artist_detail' song.artist.id %}"
+                   class="text-emerald-600 font-medium hover:underline hover:text-emerald-800 transition">
+                  {{ song.artist.name }}
+                </a>
+              </p>
+              {% if user.is_authenticated and song.audio_file %}
+                <audio controls preload="none" class="w-full rounded-lg">
+                  <source src="{% url 'audio_play' song.id %}" type="audio/mpeg">
+                </audio>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Новинки -->
+    {% if new_songs %}
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🆕 Новинки</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {% for song in new_songs %}
+          <div class="group bg-white/70 backdrop-blur-md rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+            {% if song.album.cover %}
+              <div class="relative">
+                <img src="{{ song.album.cover.url }}" alt="{{ song.title }}"
+                     class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+              </div>
+            {% endif %}
+            <div class="p-6 text-center bg-white/60 backdrop-blur-xl rounded-t-3xl -mt-4">
+              <h3 class="text-xl font-semibold text-gray-800 mb-1">{{ song.title }}</h3>
+              <p class="text-gray-500 mb-3">
+                <a href="{% url 'artist_detail' song.artist.id %}"
+                   class="text-emerald-600 font-medium hover:underline hover:text-emerald-800 transition">
+                  {{ song.artist.name }}
+                </a>
+              </p>
+              {% if user.is_authenticated and song.audio_file %}
+                <audio controls preload="none" class="w-full rounded-lg">
+                  <source src="{% url 'audio_play' song.id %}" type="audio/mpeg">
+                </audio>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,1021 @@
+﻿[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "myapp",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "myapp",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "myapp",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "app",
+        "model": "artist"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "app",
+        "model": "genre"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "app",
+        "model": "album"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "app",
+        "model": "song"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "account",
+        "model": "emailaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "account",
+        "model": "emailconfirmation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialaccount"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialapp"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "socialaccount",
+        "model": "socialtoken"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "z1rgeg8etsqq7dvs0vyf50xw3bqrzu6s",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGln4z1LScwZr12vjALKlOKkQd4dIKaB9M_NeIuK61LiOPMeJxVlocfjdCNMjtw3wHduty9TbMk8kN0XudMhr5_y87O7fQcVRv3VOxKQdetaK1dHZE3gorpRglbcWORv2jCaUZFJQPmnvCAhycFAAjXh_APhgOEg:1vE1sU:7aBSJ7AQIhblEQrg9w9JyxKZWlOp-a0rpMSHBJGuv-o",
+        "expire_date": "2025-11-12T08:49:58.012Z"
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product",
+        "content_type": [
+            "myapp",
+            "product"
+        ],
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product",
+        "content_type": [
+            "myapp",
+            "product"
+        ],
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product",
+        "content_type": [
+            "myapp",
+            "product"
+        ],
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view product",
+        "content_type": [
+            "myapp",
+            "product"
+        ],
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add category",
+        "content_type": [
+            "myapp",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change category",
+        "content_type": [
+            "myapp",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete category",
+        "content_type": [
+            "myapp",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view category",
+        "content_type": [
+            "myapp",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add order",
+        "content_type": [
+            "myapp",
+            "order"
+        ],
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change order",
+        "content_type": [
+            "myapp",
+            "order"
+        ],
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete order",
+        "content_type": [
+            "myapp",
+            "order"
+        ],
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view order",
+        "content_type": [
+            "myapp",
+            "order"
+        ],
+        "codename": "view_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add artist",
+        "content_type": [
+            "app",
+            "artist"
+        ],
+        "codename": "add_artist"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change artist",
+        "content_type": [
+            "app",
+            "artist"
+        ],
+        "codename": "change_artist"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete artist",
+        "content_type": [
+            "app",
+            "artist"
+        ],
+        "codename": "delete_artist"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view artist",
+        "content_type": [
+            "app",
+            "artist"
+        ],
+        "codename": "view_artist"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add genre",
+        "content_type": [
+            "app",
+            "genre"
+        ],
+        "codename": "add_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change genre",
+        "content_type": [
+            "app",
+            "genre"
+        ],
+        "codename": "change_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete genre",
+        "content_type": [
+            "app",
+            "genre"
+        ],
+        "codename": "delete_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view genre",
+        "content_type": [
+            "app",
+            "genre"
+        ],
+        "codename": "view_genre"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add album",
+        "content_type": [
+            "app",
+            "album"
+        ],
+        "codename": "add_album"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change album",
+        "content_type": [
+            "app",
+            "album"
+        ],
+        "codename": "change_album"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete album",
+        "content_type": [
+            "app",
+            "album"
+        ],
+        "codename": "delete_album"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view album",
+        "content_type": [
+            "app",
+            "album"
+        ],
+        "codename": "view_album"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add song",
+        "content_type": [
+            "app",
+            "song"
+        ],
+        "codename": "add_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change song",
+        "content_type": [
+            "app",
+            "song"
+        ],
+        "codename": "change_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete song",
+        "content_type": [
+            "app",
+            "song"
+        ],
+        "codename": "delete_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view song",
+        "content_type": [
+            "app",
+            "song"
+        ],
+        "codename": "view_song"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "add_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "change_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "delete_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "view_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "add_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "change_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "delete_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "view_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "add_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "change_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "delete_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view social account",
+        "content_type": [
+            "socialaccount",
+            "socialaccount"
+        ],
+        "codename": "view_socialaccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "add_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "change_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "delete_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view social application",
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "codename": "view_socialapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "add_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "change_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "delete_socialtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view social application token",
+        "content_type": [
+            "socialaccount",
+            "socialtoken"
+        ],
+        "codename": "view_socialtoken"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$4d9pQRUlt5IWthg4FsBJHQ$YF5INl+OdG0yvRT47H/jTu6ghMaQOzD7JrCMQd5dLHQ=",
+        "last_login": "2025-10-26T17:34:38.176Z",
+        "is_superuser": false,
+        "username": "alex",
+        "first_name": "",
+        "last_name": "",
+        "email": "asd@asd.asd",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-10-23T17:10:07.095Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$yAj8BIF6vfwswjiCGDjR36$mXs2qWAh9ZKJbTx7qPe6oiGBrqIh6F7n1raCqyDiQTQ=",
+        "last_login": "2025-10-29T08:49:58.007Z",
+        "is_superuser": true,
+        "username": "alex7",
+        "first_name": "",
+        "last_name": "",
+        "email": "alexx7887500@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-23T17:59:50.772Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
+
