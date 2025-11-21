@@ -72,7 +72,7 @@
         {% for genre in genres %}
           <a href="?genre={{ genre.id }}"
              class="px-4 py-2 rounded-full text-sm font-medium transition
-             {% if genre.id|stringformat:"s" == selected_genre %}
+             {% if genre.id|stringformat:"d" == selected_genre %}
                bg-emerald-500 text-white shadow-md
              {% else %}
                bg-gray-100 text-gray-700 hover:bg-emerald-100
