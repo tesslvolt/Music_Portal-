@@ -19,7 +19,7 @@ def register_view(request):
             user = authenticate(username=user.username, password=form.cleaned_data['password'])
 
             if user:
-                login(request, user)  # сразу авторизуем пользователя
+                login(request, user, backend='django.contrib.auth.backends.ModelBackend')  # сразу авторизуем пользователя
             return redirect('main')  # редирект на главную
     else:
         form = RegisterForm()
