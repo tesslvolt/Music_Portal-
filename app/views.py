@@ -14,16 +14,26 @@ def register_view(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.set_password(form.cleaned_data['password'])  # хэшируем пароль
-            user.save()
-            user = authenticate(username=user.username, password=form.cleaned_data['password'])
 
-            if user:
-                login(request, user, backend='django.contrib.auth.backends.ModelBackend')  # сразу авторизуем пользователя
-            return redirect('main')  # редирект на главную
+            raw_password = form.cleaned_data['password']  # пароль из формы
+
+            user.set_password(raw_password)  # хэшируем
+            user.save()
+
+            # аутентификация
+            user = authenticate(username=user.username, password=raw_password)
+
+            # логиним пользователя
+            if user is not None:
+                login(request, user)
+                return redirect('main')
+
+            return redirect('main')
     else:
         form = RegisterForm()
+
     return render(request, 'register.html', {'form': form})
+
 
 
 def main_view(request):
