@@ -6,7 +6,7 @@ __pycache__/
 
 media/
 staticfiles/
-
+db.sqlite_music/
 
 python3 -m venv venv
 source venv/bin/activate
