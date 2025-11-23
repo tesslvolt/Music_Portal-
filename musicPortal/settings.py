@@ -171,15 +171,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/login/'
 
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         'APP': {
-#             'client_id': os.environ.get('GOOGLE_CLIENT_ID'),
-#             'secret': os.environ.get('GOOGLE_CLIENT_SECRET'),
-#             'key': ''
-#         }
-#     }
-# }
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
