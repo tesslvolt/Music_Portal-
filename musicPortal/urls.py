@@ -30,3 +30,23 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# urlpatterns += [
+#     path(
+#         "swagger/",
+#         schema_view.with_ui("swagger", cache_time=0),
+#         name="schema-swagger-ui",
+#     ),
+#
+#     #ReDoc
+#     path(
+#         "redoc/",
+#         schema_view.with_ui("redoc", cache_time=0),
+#         name="schema-redoc",
+#     ),
+#     #json/yaml схема
+#     re_path(
+#         r"swagger(?P<format>\.json|\.yaml)$)/",
+#         schema_view.without_ui(cache_time=0),
+#         name="schema-json",
+#     ),
+# ]

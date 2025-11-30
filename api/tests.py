@@ -1,5 +1,9 @@
 from http.client import responses
+from django.test import TestCase
+from django.urls import reverse, resolve
 
+from app.views import main_view, register_view, audio_play, artist_view
+from django.contrib.auth.views import LoginView, LogoutView
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -147,13 +151,6 @@ class ModelsTestCase(TestCase):
         self.assertEqual(self.song.genre, self.genre)
         self.assertEqual(self.song.count, 300)
         self.assertEqual(str(self.song), "Song of Artist — Artist")
-
-from django.test import TestCase
-from django.urls import reverse, resolve
-
-from app.views import main_view, register_view, audio_play, artist_view
-from django.contrib.auth.views import LoginView, LogoutView
-
 
 class URLTests(TestCase):
 
